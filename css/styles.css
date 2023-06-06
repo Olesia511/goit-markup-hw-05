@@ -138,7 +138,8 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
 
-  color: var(--color-text-h);
+  color: var(--color-focus-btn);
+  /* color: var(--color-text-h); */
 }
 
 .header-link::after {
@@ -251,9 +252,7 @@ img {
 }
 
 .footer-socials-link {
-  transition: background-color var(--time) var(--timing-function),
-    transform var(--time) var(--timing-function);
-  transform: var(--scale-bef);
+  transition: background-color var(--time) var(--timing-function);
 
   display: flex;
   align-items: center;
@@ -267,7 +266,6 @@ img {
 
 .footer-socials-link:is(:hover, :focus) {
   background-color: #31d0aa;
-  transform: var(--scale-aft);
 }
 
 .footer-socials-icon {
@@ -308,10 +306,7 @@ img {
 }
 
 .hero-btn {
-  transition: background-color var(--time) var(--timing-function),
-    transform var(--time) var(--timing-function);
-  transform: var(--scale-bef);
-  transform: var(--scale-bef);
+  transition: background-color var(--time) var(--timing-function);
 
   display: block;
   min-width: 169px;
@@ -337,8 +332,6 @@ img {
 }
 
 .hero-btn:is(:hover, :focus) {
-  transform: var(--scale-aft);
-
   background-color: var(--color-focus-btn);
 }
 
@@ -474,9 +467,7 @@ img {
 }
 
 .socials-link {
-  transition: background-color var(--time) var(--timing-function),
-    transform var(--time) var(--timing-function);
-  transform: var(--scale-bef);
+  transition: background-color var(--time) var(--timing-function);
 
   display: flex;
   align-items: center;
@@ -489,8 +480,6 @@ img {
 }
 
 .socials-link:is(:hover, :focus) {
-  transform: var(--scale-aft);
-
   background-color: var(--color-focus-btn);
 }
 
@@ -525,8 +514,7 @@ img {
 
 .customers-link {
   transition: border-color var(--time) var(--timing-function),
-    transform var(--time) var(--timing-function);
-  transform: var(--scale-bef);
+    color var(--time) var(--timing-function);
 
   display: flex;
   justify-content: center;
@@ -540,8 +528,6 @@ img {
 }
 
 .customers-link:is(:hover, :focus) {
-  transform: var(--scale-aft);
-
   border-color: var(--color-focus-btn);
   color: var(--color-focus-btn);
 }
@@ -575,9 +561,7 @@ img {
   transition: color var(--time) var(--timing-function),
     background-color var(--time) var(--timing-function),
     border-color var(--time) var(--timing-function),
-    box-shadow var(--time) var(--timing-function),
-    transform var(--time) var(--timing-function);
-  transform: var(--scale-bef);
+    box-shadow var(--time) var(--timing-function);
 
   display: block;
   padding: 12px 24px;
@@ -600,8 +584,6 @@ img {
 
 .filters-btn:hover,
 .filters-btn:focus {
-  transform: var(--scale-aft);
-
   border-radius: 4px;
   border: 1px solid transparent;
 
@@ -761,6 +743,7 @@ img {
 .modal-button:is(:hover, :focus) {
   background-color: var(--color-focus-btn);
   fill: #ffffff;
+  border: none;
 }
 
 .modal-icon {
