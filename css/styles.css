@@ -129,6 +129,7 @@ img {
 .header-link {
   position: relative;
   padding: 24px 0;
+  transition: color var(--time) var(--timing-function);
 
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -141,28 +142,28 @@ img {
 }
 
 .header-link::after {
+  transition: transform var(--time) var(--timing-function);
+  transform: scaleX(0);
+  opacity: 0;
+
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
   height: 4px;
   width: 100%;
   border-radius: 2px;
 
   background-color: transparent;
-
-  transition: transform var(--time) var(--timing-function);
-  transform: scaleX(0);
-  opacity: 0;
 }
 
 .header-link.current::after,
 .header-link:hover::after,
 .header-link:focus::after {
-  background-color: var(--color-focus-btn);
-
   transform: scaleX(1);
   opacity: 1;
+
+  background-color: var(--color-focus-btn);
 }
 
 .header-link:hover,
@@ -171,6 +172,8 @@ img {
 }
 
 .contact {
+  transition: color var(--time) var(--timing-function);
+
   padding-top: 24px;
   padding-bottom: 24px;
 
@@ -248,6 +251,10 @@ img {
 }
 
 .footer-socials-link {
+  transition: background-color var(--time) var(--timing-function),
+    transform var(--time) var(--timing-function);
+  transform: var(--scale-bef);
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -256,9 +263,6 @@ img {
   border-radius: 50%;
 
   background-color: var(--color-text-button);
-
-  transition: transform var(--time) var(--timing-function);
-  transform: var(--scale-bef);
 }
 
 .footer-socials-link:is(:hover, :focus) {
@@ -304,6 +308,11 @@ img {
 }
 
 .hero-btn {
+  transition: background-color var(--time) var(--timing-function),
+    transform var(--time) var(--timing-function);
+  transform: var(--scale-bef);
+  transform: var(--scale-bef);
+
   display: block;
   min-width: 169px;
   height: 56px;
@@ -325,14 +334,12 @@ img {
   color: var(--color-text-hero);
   background-color: var(--color-text-button);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
-  transition: transform var(--time) var(--timing-function);
-  transform: var(--scale-bef);
 }
 
 .hero-btn:is(:hover, :focus) {
-  background-color: var(--color-focus-btn);
   transform: var(--scale-aft);
+
+  background-color: var(--color-focus-btn);
 }
 
 /***---------------goal of the company---------------------**/
@@ -467,6 +474,10 @@ img {
 }
 
 .socials-link {
+  transition: background-color var(--time) var(--timing-function),
+    transform var(--time) var(--timing-function);
+  transform: var(--scale-bef);
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -475,14 +486,12 @@ img {
   border-radius: 50%;
 
   background-color: var(--color-text-button);
-
-  transition: transform var(--time) var(--timing-function);
-  transform: var(--scale-bef);
 }
 
 .socials-link:is(:hover, :focus) {
-  background-color: var(--color-focus-btn);
   transform: var(--scale-aft);
+
+  background-color: var(--color-focus-btn);
 }
 
 /* --------------------Customers-------------------- */
@@ -515,6 +524,10 @@ img {
 }
 
 .customers-link {
+  transition: border-color var(--time) var(--timing-function),
+    transform var(--time) var(--timing-function);
+  transform: var(--scale-bef);
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -524,16 +537,13 @@ img {
   border-radius: 4px;
 
   color: var(--icon-company);
-
-  transition: transform var(--time) var(--timing-function);
-  transform: var(--scale-bef);
 }
 
 .customers-link:is(:hover, :focus) {
+  transform: var(--scale-aft);
+
   border-color: var(--color-focus-btn);
   color: var(--color-focus-btn);
-
-  transform: var(--scale-aft);
 }
 
 .customers-icon {
@@ -562,6 +572,13 @@ img {
 }
 
 .filters-btn {
+  transition: color var(--time) var(--timing-function),
+    background-color var(--time) var(--timing-function),
+    border-color var(--time) var(--timing-function),
+    box-shadow var(--time) var(--timing-function),
+    transform var(--time) var(--timing-function);
+  transform: var(--scale-bef);
+
   display: block;
   padding: 12px 24px;
   align-items: center;
@@ -576,15 +593,15 @@ img {
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0.04em;
+
   color: var(--color-text-button);
   background-color: var(--color-btn);
-
-  transition: transform var(--time) var(--timing-function);
-  transform: var(--scale-bef);
 }
 
 .filters-btn:hover,
 .filters-btn:focus {
+  transform: var(--scale-aft);
+
   border-radius: 4px;
   border: 1px solid transparent;
 
@@ -593,8 +610,6 @@ img {
 
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-
-  transform: var(--scale-aft);
 }
 
 .portfolio-list {
@@ -620,10 +635,14 @@ img {
 }
 
 .portfolio-link {
+  transition: box-shadow var(--time) var(--timing-function);
+
   display: block;
 }
 
 .portfolio-link:is(:hover, :focus) {
+  transform: translateY(0%);
+
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
@@ -631,35 +650,35 @@ img {
 .portfolio-thumb {
   position: relative;
   overflow: hidden;
-}
+  transition: transform var(--time) var(--timing-function);
 
-.portfolio-overlay {
-  position: absolute;
-  left: 0;
-  bottom: 0;
   width: 100%;
   height: 100%;
 
   background-color: var(--color-text-button);
-
-  transition: transform var(--time) var(--timing-function);
-  transform: translateY(100%);
-  opacity: 0.5;
 }
 
 .portfolio-thumb-text {
   position: absolute;
+  top: 0;
+
+  transform: translateY(100%);
+  transition: transform var(--time) var(--timing-function);
+
   padding: 40px 32px;
+  height: 100%;
+  width: 100%;
 
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--color-btn);
+  background-color: var(--color-text-button);
 }
 
-.portfolio-link:is(:hover, :focus) .portfolio-overlay {
-  transform: translateY(0);
-  opacity: 1;
+.portfolio-link:is(:hover, :focus) .portfolio-thumb,
+.portfolio-link:is(:hover, :focus) .portfolio-thumb-text {
+  transform: translateY(0%);
 }
 
 .portfolio-title {
@@ -690,6 +709,9 @@ img {
   z-index: 1000;
   opacity: 1;
 
+  transition: opacity var(--time) var(--timing-function),
+    visibility var(--time) var(--timing-function);
+
   background-color: rgba(46, 47, 66, 0.4);
 }
 
@@ -704,8 +726,9 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: transform var(--time) var(--timing-function);
 
-  min-width: 408px;
+  width: 408px;
   min-height: 584px;
   border-radius: 4px;
   padding: 24px;
@@ -716,16 +739,31 @@ img {
 }
 
 .modal-button {
-  margin-left: 360px;
-  background-color: transparent;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  transition: background-color var(--time) var(--timing-function),
+    border var(--time) var(--timing-function);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+
+  background-color: var(--border-header);
+}
+
+.modal-button:is(:hover, :focus) {
+  background-color: var(--color-focus-btn);
+  fill: #ffffff;
 }
 
 .modal-icon {
-  width: 24px;
-  height: 24px;
-  padding: 6px;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-
+  transition: fill var(--time) var(--timing-function);
   background-color: var(--border-header);
 }
