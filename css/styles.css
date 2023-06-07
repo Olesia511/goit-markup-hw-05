@@ -62,7 +62,7 @@ img {
 }
 
 .container {
-  max-width: 1158px;
+  width: 1158px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
@@ -502,7 +502,7 @@ img {
 }
 
 .customers-list {
-  max-width: 1158px;
+  width: 1158px;
   justify-content: center;
   align-items: center;
   gap: 24px;
