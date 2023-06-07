@@ -275,7 +275,7 @@ img {
 /***----------------------HERO------------------------**/
 
 .hero-frame {
-  max-width: 1440px;
+  /* max-width: 1440px; */
   height: 600px;
   padding-top: 188px;
   padding-bottom: 188px;
