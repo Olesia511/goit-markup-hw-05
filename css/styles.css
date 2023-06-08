@@ -1,5 +1,5 @@
 body {
-  padding: 72px;
+  padding-top: 72px;
   font-family: "Roboto", sans-serif;
   color: #434455;
   background-color: #fff;
@@ -502,7 +502,7 @@ img {
 }
 
 .customers-list {
-  width: 1158px;
+  width: 1128px;
   justify-content: center;
   align-items: center;
   gap: 24px;
